@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/PratyushaRaghupatruni/eat-da-burger/issues"
   },
-  "homepage": "https://github.com/PratyushaRaghupatruni/eat-da-burger#readme",
+  "homepage": "https://github.com/PratyushaRaghupatruni/eat-da-burger",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
