@@ -1,8 +1,7 @@
 
     <br>
-
     <div class="container">
-        <h3 class="text-danger text-center">Eat-da-burger!!</h3>
+        <h2 class="text-danger text-center logo">Eat-da-burger!!</h3>
         <br>
      <div class="row">
         <div class="col-md-4">
@@ -15,19 +14,18 @@
        </div>
      </div>
      <br>
-     <br>
      
      <div class="row">
          <div class="col-md-3 text-center">
                 <!-- burgers from database which are not devoured -->
-             <h5 class="text-secondary">Burgers To be Eaten</h5>
+             <h5 class="headers text-secondary">Burgers To be Eaten</h5>
              <br>
                 {{#each burger}}
                 {{#unless devoured}}
-                <p>
-                     {{this.id}}. {{this.burger_name}}
+                   <ul class="burger-names">
+                     {{this.burger_name}}
                      <button class="devour btn btn-primary btn-sm" data-id="{{this.id}}">Devour!</button>
-                 </p>
+                   </ul>
                 {{/unless}}
                 {{/each}}
          </div>
@@ -37,19 +35,18 @@
              <form class="add-burger">
             <textarea class="form-control" id="burger-name" rows="5" id="comment"></textarea>
             <br>
-            <br>
             <button type="submit" class="btn btn-primary">Add Burger</button>
             </form>
          </div>
          <div class="col-md-3 text-center">
              <!-- burgers which are devoured -->
-            <h5 class="text-secondary">Burgers Devoured</h5>
+            <h5 class="headers text-secondary">Burgers Devoured</h5>
             <br>
               {{#each burger}}
               {{#if devoured}}
-                 <p>
-                     {{this.id}}.{{this.burger_name}}
-                 </p>
+                 <ul class="burger-names">
+                     {{this.burger_name}}
+                 </ul>
              {{/if}}
              {{/each}}
          

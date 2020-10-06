@@ -1,3 +1,9 @@
 body {
     background-color: #ffe875;
 }
+.logo ,.headers {
+font-family: 'Kaushan Script', cursive;
+}
+.burger-names{
+font-family: 'Special Elite', cursive;
+}

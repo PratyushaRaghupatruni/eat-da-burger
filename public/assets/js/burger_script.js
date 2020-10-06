@@ -1,5 +1,6 @@
 $(function() {
     $(".devour").on("click", function(event) {
+      event.preventDefault();
       var id = $(this).data("id");
        console.log("Data Id : " + id);
       var burgerDevoured = {
