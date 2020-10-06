@@ -8,3 +8,4 @@ create table burgers(
     devoured boolean NOT NULL DEFAULT false,
     PRIMARY KEY(id)
 )
+

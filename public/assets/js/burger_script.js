@@ -1,7 +1,7 @@
 $(function() {
     $(".devour").on("click", function(event) {
       var id = $(this).data("id");
-       console.log(id);
+       console.log("Data Id : " + id);
       var burgerDevoured = {
         devoured: true
       };
@@ -12,7 +12,7 @@ $(function() {
         data: burgerDevoured
       }).then(
         function() {
-          console.log("changed devoured to" +id );
+          console.log("changed devoured to : " + id );
           // Reload the page to get the updated list
           location.reload();
         }
@@ -20,11 +20,13 @@ $(function() {
     });
   
     $(".add-burger").on("submit", function(event) {
-      console.log("hello i am in the addburger")
+
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
+
       let burgerName=$("#burger-name").val().trim();
-       if(burgerName=' ' ){
+      console.log("burgerName: "+ burgerName);
+       if(burgerName === ""){
            return false;
        }
 

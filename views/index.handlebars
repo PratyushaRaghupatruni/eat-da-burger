@@ -1,51 +1,63 @@
-<div class="container">
-    
-</div><br>
-<div class="container">
-    <div class="text-center">
-        <h1 class="logo text-danger">Eat-Da-Burger!</h1>
+
+    <br>
+
+    <div class="container">
+        <h3 class="text-danger text-center">Eat-da-burger!!</h3>
         <br>
-        <img src="/assets/images/burger_img.png" class="mx-auto d-block" style="background-color:#ffe875;" width="120"
-            height="120" alt="Burger-image"
-    </div>
-    <br><br>
-    <div class="row">
-        <div class="col ">
-            <h3 class="text-secondary">Burgers To be Eaten</h3>
-            <br>
-            {{!-- Loop through burger data obtained from db which are not devoured i.e whose value is false --}}
-             {{#each burgers}}
+     <div class="row">
+        <div class="col-md-4">
+        </div>
+          <div class="col-md-4">
+            <img src="/assets/images/burger.png" class="mx-auto d-block" style="background-color:#ffe875;" width="120"
+            height="120" alt="Burger-Image">
+          </div>
+       <div class="col-md-4">
+       </div>
+     </div>
+     <br>
+     <br>
+     
+     <div class="row">
+         <div class="col-md-3 text-center">
+                <!-- burgers from database which are not devoured -->
+             <h5 class="text-secondary">Burgers To be Eaten</h5>
+             <br>
+                {{#each burger}}
                 {{#unless devoured}}
-                        <p>
-                            {{this.id}}. {{this.burger_name}}
-                            <button class="devour btn btn-primary btn-sm" data-id="{{this.id}}">Devour!</button>
-                        </p>
+                <p>
+                     {{this.id}}. {{this.burger_name}}
+                     <button class="devour btn btn-primary btn-sm" data-id="{{this.id}}">Devour!</button>
+                 </p>
                 {{/unless}}
-            {{/each}}
-        </div>
-
-        <div class="col">
-            <h3 class="text-secondary text-center">Enter burger you would like to eat!</h3>
-            <br>
-            <form class="add-burger text-center">
-                <div class="col-sm-12">
-                    <textarea type="text" name="burger-name" id="burger-name" rows="3" cols="50%"></textarea>
-                    <button type="submit" class="btn btn-primary">Add Burger!</button>
-                </div>
-            </form>
-        </div>
-
-        <div class="col ">
-            <h3 class="text-secondary">Burgers Devoured</h3>
-            <br>
-                {{!-- Loop through burger data obtained from db which are devoured i.e whose value is true --}}
-                {{#each burgers}}
-                    {{#if devoured}}
-                        <p>
-                            {{this.id}}. {{this.burger_name}}
-                        </p>
-                    {{/if}}
                 {{/each}}
-        </div>
+         </div>
+
+         <div class="col-md-6 text-center">
+             <!-- text area to add the burgers -->
+             <form class="add-burger">
+            <textarea class="form-control" id="burger-name" rows="5" id="comment"></textarea>
+            <br>
+            <br>
+            <button type="submit" class="btn btn-primary">Add Burger</button>
+            </form>
+         </div>
+         <div class="col-md-3 text-center">
+             <!-- burgers which are devoured -->
+            <h5 class="text-secondary">Burgers Devoured</h5>
+            <br>
+              {{#each burger}}
+              {{#if devoured}}
+                 <p>
+                     {{this.id}}.{{this.burger_name}}
+                 </p>
+             {{/if}}
+             {{/each}}
+         
+         </div>
+     </div>
     </div>
-</div>
+
+
+    
+</body>
+</html>
