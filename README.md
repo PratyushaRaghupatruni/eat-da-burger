@@ -1,4 +1,4 @@
-# eat-da-burger
+# eat-da-burger!!
 
 ![MIT License](https://img.shields.io/badge/license-MIT-green)
 
@@ -29,7 +29,7 @@ Create a burger logger: Eat-Da-Burger restaurant app with MySQL, Node, Express, 
 
 |Medium Devices/ Laptop|Small Devices/ Tablet|Extra Small Devices/Phone
 |--|--|--
-|![Laptop](public/assets/images/Laptop.png)|![Tablet](public/assets/images/Tablet.png)|![Phone](public/assets/images/mobile.png) 
+|![Laptop](public/assets/images/laptop.png)|![Tablet](public/assets/images/tablet.png)|![Phone](public/assets/images/mobile.png) 
 
  # User Story
 
